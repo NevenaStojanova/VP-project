@@ -29,7 +29,7 @@ namespace MatchingGame
         List<string> icons;
 
         private int timeLeft = 40;
-        private int firstClickWaitTime = 1;
+        //private int firstClickWaitTime = 1;
 
         private SoundPlayer match = new SoundPlayer("Ding-sound-shiny.wav");
         private SoundPlayer mismatch = new SoundPlayer("Computer Error Alert.wav");
