@@ -27,6 +27,11 @@ namespace MatchingGame
         // in the Webdings font,
         // and each icon appears twice in this list
         List<string> icons;
+        List<string> icons2 = new List<string>()
+            {
+                "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "P", "Q", "R", "S",
+            "T", "&", "e", "b", "m"
+            };
 
         private int timeLeft = 40;
         //private int firstClickWaitTime = 1;
@@ -42,11 +47,14 @@ namespace MatchingGame
         /// </summary>
         private void AssignIconsToSquares()
         {
-            icons = new List<string>()
+            icons = new List<string>();
+            for (int i = 0; i < 8; i++)
             {
-                "!", "!", "N", "N", ",", ",", "k", "k",
-                "b", "b", "v", "v", "w", "w", "z", "z"
-            };
+                int r = random.Next(0, icons2.Count);
+                icons.Add(icons2[r]);
+                icons.Add(icons2[r]);
+                icons2.RemoveAt(r);
+            }
 
             // The TableLayoutPanel has 16 labels,
             // and the icon list has 16 icons,
@@ -173,6 +181,7 @@ namespace MatchingGame
             // If the loop didn’t return, it didn't find
             // any unmatched icons
             // That means the user won. Show a message and close the form
+            tCountdown.Stop();
             MessageBox.Show("You matched all the icons!", "Congratulations");
             Close();
         }

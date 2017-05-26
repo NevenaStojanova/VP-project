@@ -18,6 +18,11 @@ namespace MatchingGame
         Random random = new Random();
 
         List<string> icons;
+        List<string> icons2= new List<string>()
+            {
+                "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "P", "Q", "R", "S",
+            "T", "&", "e", "b", "m"
+            };
 
         private int timeLeft = 20;
         //private int firstClickWaitTime = 1;
@@ -29,10 +34,14 @@ namespace MatchingGame
 
         private void AssignIconsToSquares()
         {
-            icons = new List<string>()
+            icons = new List<string>();
+            for(int i=0; i<2; i++)
             {
-                "G", "G", "J", "J"
-            };
+                int r = random.Next(0,icons2.Count);
+                icons.Add(icons2[r]);
+                icons.Add(icons2[r]);
+                icons2.RemoveAt(r);
+            }
 
            
             foreach (Control control in tlp2x2.Controls)
@@ -135,7 +144,7 @@ namespace MatchingGame
                 }
             }
 
-            
+            tCountdown.Stop();
             MessageBox.Show("You matched all the icons!", "Congratulations");
             Close();
         }
