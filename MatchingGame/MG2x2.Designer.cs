@@ -137,6 +137,8 @@
             // 
             // btnStartForm
             // 
+            this.btnStartForm.FlatAppearance.BorderSize = 0;
+            this.btnStartForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartForm.Location = new System.Drawing.Point(12, 9);
             this.btnStartForm.Name = "btnStartForm";
             this.btnStartForm.Size = new System.Drawing.Size(51, 23);
@@ -147,9 +149,9 @@
             // 
             // btnNewGame
             // 
+            this.btnNewGame.BackColor = System.Drawing.Color.Transparent;
             this.btnNewGame.FlatAppearance.BorderSize = 0;
             this.btnNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewGame.BackColor = System.Drawing.Color.Transparent;
             this.btnNewGame.Location = new System.Drawing.Point(69, 9);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(72, 23);

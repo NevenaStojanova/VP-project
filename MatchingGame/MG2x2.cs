@@ -51,6 +51,7 @@ namespace MatchingGame
         {
             InitializeComponent();
             AssignIconsToSquares();
+            tCountdown.Start();
         }
 
         private void MG2x2_FormClosed(object sender, FormClosedEventArgs e)
@@ -213,5 +214,6 @@ namespace MatchingGame
             Cursor = Cursors.Arrow;
         }
 
-   }
+       
+    }
 }

@@ -306,6 +306,7 @@ namespace MatchingGame
             this.lTimeLeft.Size = new System.Drawing.Size(62, 25);
             this.lTimeLeft.TabIndex = 1;
             this.lTimeLeft.Text = "00:40";
+            this.lTimeLeft.Click += new System.EventHandler(this.lTimeLeft_Click);
             // 
             // btnNewGame
             // 
@@ -321,6 +322,8 @@ namespace MatchingGame
             // 
             // btnStartForm
             // 
+            this.btnStartForm.FlatAppearance.BorderSize = 0;
+            this.btnStartForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartForm.Location = new System.Drawing.Point(13, 9);
             this.btnStartForm.Name = "btnStartForm";
             this.btnStartForm.Size = new System.Drawing.Size(75, 23);

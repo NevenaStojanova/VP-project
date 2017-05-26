@@ -625,6 +625,8 @@
             // 
             // btnStartForm
             // 
+            this.btnStartForm.FlatAppearance.BorderSize = 0;
+            this.btnStartForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartForm.Location = new System.Drawing.Point(12, 9);
             this.btnStartForm.Name = "btnStartForm";
             this.btnStartForm.Size = new System.Drawing.Size(75, 23);

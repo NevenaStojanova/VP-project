@@ -49,5 +49,10 @@ namespace MatchingGame
                 System.Windows.Forms.Application.Exit();
             }
         }
+
+        private void btnInstructions_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Click on the squares and match the figuers that will show up as soon as possible.", "Instructions");
+        }
     }
 }

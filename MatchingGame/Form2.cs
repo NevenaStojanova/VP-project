@@ -251,5 +251,10 @@ namespace MatchingGame
         {
             Cursor = Cursors.Arrow;
         }
+
+        private void lTimeLeft_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
