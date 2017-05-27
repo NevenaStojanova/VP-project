@@ -105,6 +105,8 @@
   <ItemGroup>
     <None Include="Resources\coverPhoto.png" />
     <None Include="Mute_Icon.png" />
+    <None Include="bin\Debug\Computer Error Alert.wav" />
+    <None Include="bin\Debug\Ding-sound-shiny.wav" />
     <Content Include="UnMute_Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

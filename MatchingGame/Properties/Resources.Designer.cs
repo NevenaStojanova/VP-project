@@ -61,12 +61,30 @@ namespace MatchingGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Computer_Error_Alert {
+            get {
+                return ResourceManager.GetStream("Computer_Error_Alert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap coverPhoto {
             get {
                 object obj = ResourceManager.GetObject("coverPhoto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Ding_sound_shiny {
+            get {
+                return ResourceManager.GetStream("Ding_sound_shiny", resourceCulture);
             }
         }
         
