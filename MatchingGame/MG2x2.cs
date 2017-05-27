@@ -35,19 +35,7 @@ namespace MatchingGame
 
         private bool mute = false;
 
-        public Stream S
-        {
-            get
-            {
-                return s;
-            }
-
-            set
-            {
-                s = value;
-            }
-        }
-
+       
         private void AssignIconsToSquares()
         {
             icons = new List<string>();
