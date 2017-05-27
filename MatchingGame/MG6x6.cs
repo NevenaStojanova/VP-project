@@ -98,7 +98,7 @@ namespace MatchingGame
 
                 if (firstClicked.Text == secondClicked.Text && mute == false)
                 {
-                    //match.Play();
+                    match.Play();
 
                 }
 
@@ -107,7 +107,7 @@ namespace MatchingGame
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
-                    //if (mute == false) match.Play();
+                    if (mute == false) match.Play();
                     firstClicked = null;
                     secondClicked = null;
                     return;

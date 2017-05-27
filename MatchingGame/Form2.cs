@@ -136,7 +136,7 @@ namespace MatchingGame
                 // so the player can click another icon
                 if (firstClicked.Text == secondClicked.Text)
                 {
-                    //if(mute == false) match.Play();
+                    if(mute == false) match.Play();
                     firstClicked = null;
                     secondClicked = null;
                     return;
@@ -146,7 +146,7 @@ namespace MatchingGame
                 // clicked two different icons, so start the 
                 // timer (which will wait three quarters of 
                 // a second, and then hide the icons)
-                //if(mute == false) //mismatch.Play();
+                if(mute == false) mismatch.Play();
                 tNotMatching.Start();
             }
         }
