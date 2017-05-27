@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -27,10 +28,25 @@ namespace MatchingGame
         private int timeLeft = 20;
         //private int firstClickWaitTime = 1;
 
-        private SoundPlayer match = new SoundPlayer("Ding-sound-shiny.wav");
-        private SoundPlayer mismatch = new SoundPlayer("Computer Error Alert.wav");
+        //private SoundPlayer match = new SoundPlayer("Ding-sound-shiny.wav");
+        //private SoundPlayer mismatch = new SoundPlayer("Computer Error Alert.wav");
+        SoundPlayer match = new SoundPlayer(MatchingGame.Properties.Resources.Ding_sound_shiny);
+        SoundPlayer mismatch = new SoundPlayer(MatchingGame.Properties.Resources.Computer_Error_Alert);
 
         private bool mute = false;
+
+        public Stream S
+        {
+            get
+            {
+                return s;
+            }
+
+            set
+            {
+                s = value;
+            }
+        }
 
         private void AssignIconsToSquares()
         {

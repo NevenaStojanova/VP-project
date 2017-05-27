@@ -27,8 +27,11 @@ namespace MatchingGame
         private int timeLeft = 55;
         //private int firstClickWaitTime = 1;
 
-        private SoundPlayer match = new SoundPlayer("Ding-sound-shiny.wav");
-        private SoundPlayer mismatch = new SoundPlayer("Computer Error Alert.wav");
+        //private SoundPlayer match = new SoundPlayer("Ding-sound-shiny.wav");
+        //private SoundPlayer mismatch = new SoundPlayer("Computer Error Alert.wav");
+
+        SoundPlayer match = new SoundPlayer(MatchingGame.Properties.Resources.Ding_sound_shiny);
+        SoundPlayer mismatch = new SoundPlayer(MatchingGame.Properties.Resources.Computer_Error_Alert);
 
         private bool mute = false;
 
