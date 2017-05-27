@@ -100,7 +100,7 @@ namespace MatchingGame
 
                 if (firstClicked.Text == secondClicked.Text && mute == false)
                 {
-                   match.Play();
+                   //match.Play();
                     
                 }
 
@@ -116,7 +116,7 @@ namespace MatchingGame
                 }
 
                 
-                if (mute == false) mismatch.Play();
+                //if (mute == false) //mismatch.Play();
                 tNotMatching.Start();
             }
         }

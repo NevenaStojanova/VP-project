@@ -125,7 +125,7 @@ namespace MatchingGame
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
 
-                if (firstClicked.Text == secondClicked.Text && mute == false) match.Play();
+                if (firstClicked.Text == secondClicked.Text && mute == false) //match.Play();
 
 
 
@@ -146,7 +146,7 @@ namespace MatchingGame
                 // clicked two different icons, so start the 
                 // timer (which will wait three quarters of 
                 // a second, and then hide the icons)
-                if(mute == false) mismatch.Play();
+                //if(mute == false) //mismatch.Play();
                 tNotMatching.Start();
             }
         }
