@@ -109,6 +109,8 @@
     <None Include="bin\Debug\Ding-sound-shiny.wav" />
     <None Include="Computer Error Alert.wav" />
     <None Include="Ding-sound-shiny.wav" />
+    <None Include="applause.wav" />
+    <None Include="failure.wav" />
     <Content Include="UnMute_Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -32,6 +32,8 @@ namespace MatchingGame
         //private SoundPlayer mismatch = new SoundPlayer("Computer Error Alert.wav");
         SoundPlayer match = new SoundPlayer(MatchingGame.Properties.Resources.Ding_sound_shiny);
         SoundPlayer mismatch = new SoundPlayer(MatchingGame.Properties.Resources.Computer_Error_Alert);
+        SoundPlayer win = new SoundPlayer(MatchingGame.Properties.Resources.applause);
+        SoundPlayer lost = new SoundPlayer(MatchingGame.Properties.Resources.failure);
 
         private bool mute = false;
 
@@ -109,14 +111,14 @@ namespace MatchingGame
                 
                 if (firstClicked.Text == secondClicked.Text)
                 {
-                    if (mute == false) match.Play();
+                    //if (mute == false) match.Play();
                     firstClicked = null;
                     secondClicked = null;
                     return;
                 }
 
                 
-                //if (mute == false) //mismatch.Play();
+                if (mute == false) mismatch.Play();
                 tNotMatching.Start();
             }
         }
@@ -149,7 +151,9 @@ namespace MatchingGame
             }
 
             tCountdown.Stop();
+            win.Play();
             MessageBox.Show("You matched all the icons!", "Congratulations");
+            win.Stop();
             Close();
         }
 
@@ -168,7 +172,9 @@ namespace MatchingGame
                 
                 tCountdown.Stop();
                 lTimeLeft.Text = "Time's up!";
+                lost.Play();
                 MessageBox.Show("You didn't finish in time.", "Sorry!");
+                lost.Stop();
                 Close();
             }
         }

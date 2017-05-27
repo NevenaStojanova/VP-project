@@ -63,6 +63,15 @@ namespace MatchingGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream applause {
+            get {
+                return ResourceManager.GetStream("applause", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream Computer_Error_Alert {
             get {
                 return ResourceManager.GetStream("Computer_Error_Alert", resourceCulture);
@@ -85,6 +94,15 @@ namespace MatchingGame.Properties {
         internal static System.IO.UnmanagedMemoryStream Ding_sound_shiny {
             get {
                 return ResourceManager.GetStream("Ding_sound_shiny", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream failure {
+            get {
+                return ResourceManager.GetStream("failure", resourceCulture);
             }
         }
         

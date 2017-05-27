@@ -41,6 +41,8 @@ namespace MatchingGame
 
         SoundPlayer match = new SoundPlayer(MatchingGame.Properties.Resources.Ding_sound_shiny);
         SoundPlayer mismatch = new SoundPlayer(MatchingGame.Properties.Resources.Computer_Error_Alert);
+        SoundPlayer win = new SoundPlayer(MatchingGame.Properties.Resources.applause);
+        SoundPlayer lost = new SoundPlayer(MatchingGame.Properties.Resources.failure);
 
         private bool mute = false;
                
@@ -125,7 +127,7 @@ namespace MatchingGame
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
 
-                if (firstClicked.Text == secondClicked.Text && mute == false) //match.Play();
+                if (firstClicked.Text == secondClicked.Text && mute == false) match.Play();
 
 
 
@@ -136,7 +138,7 @@ namespace MatchingGame
                 // so the player can click another icon
                 if (firstClicked.Text == secondClicked.Text)
                 {
-                    if(mute == false) match.Play();
+                    //if(mute == false) match.Play();
                     firstClicked = null;
                     secondClicked = null;
                     return;
@@ -185,7 +187,9 @@ namespace MatchingGame
             // any unmatched icons
             // That means the user won. Show a message and close the form
             tCountdown.Stop();
+            win.Play();
             MessageBox.Show("You matched all the icons!", "Congratulations");
+            win.Stop();
             Close();
         }
 
@@ -205,7 +209,9 @@ namespace MatchingGame
                 // a MessageBox, and fill in the answers.
                 tCountdown.Stop();
                 lTimeLeft.Text = "Time's up!";
+                lost.Play();
                 MessageBox.Show("You didn't finish in time.", "Sorry!");
+                lost.Stop();
                 Close();
                }
         }
