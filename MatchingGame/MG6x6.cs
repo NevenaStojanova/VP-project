@@ -24,7 +24,7 @@ namespace MatchingGame
             "T", "&", "e", "b", "m"
             };
 
-        private int timeLeft = 55;
+        private int timeLeft = 120;
         //private int firstClickWaitTime = 1;
 
         //private SoundPlayer match = new SoundPlayer("Ding-sound-shiny.wav");
@@ -116,7 +116,7 @@ namespace MatchingGame
                 }
 
 
-                //if (mute == false) //mismatch.Play();
+                if (mute == false) mismatch.Play();
                 tNotMatching.Start();
             }
         }
@@ -162,8 +162,12 @@ namespace MatchingGame
                 // Display the new time left
                 // by updating the Time Left label.
                 timeLeft = timeLeft - 1;
-                if (timeLeft < 10) lTimeLeft.Text = "00:0" + timeLeft;
-                else lTimeLeft.Text = "00:" + timeLeft;
+                if (timeLeft >= 60 && timeLeft%60 >=10)
+                    lTimeLeft.Text = string.Format("0{0}:{1}",timeLeft/60, timeLeft%60);
+                else if(timeLeft >= 60 && timeLeft % 60 < 10)
+                    lTimeLeft.Text = string.Format("0{0}:0{1}", timeLeft / 60, timeLeft % 60);
+                else if (timeLeft <= 59 && timeLeft >= 10) lTimeLeft.Text = "00:" + timeLeft;
+                else lTimeLeft.Text = "00:0" + timeLeft;
             }
             else
             {

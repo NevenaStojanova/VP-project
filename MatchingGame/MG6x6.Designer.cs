@@ -621,7 +621,7 @@
             this.lTimeLeft.Name = "lTimeLeft";
             this.lTimeLeft.Size = new System.Drawing.Size(66, 25);
             this.lTimeLeft.TabIndex = 1;
-            this.lTimeLeft.Text = "00:55";
+            this.lTimeLeft.Text = "02:00";
             // 
             // btnStartForm
             // 
